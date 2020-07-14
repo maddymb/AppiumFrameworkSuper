@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests">
+	
+	<test thread-count="5" name="Android">
+		<listeners>
+			<listener class-name="com.appium.listeners.TestListeners"/>
+		</listeners>
+		<parameter name="platformName" value="Android"></parameter>
+		<parameter name="platformVersion" value="8.0.0"></parameter>
+		<parameter name="deviceName" value="Nexus"></parameter>
+		<parameter name="emulator" value="true"></parameter>
+		<parameter name="udid" value="true"></parameter>
+		<parameter name="systemPort" value="10000"></parameter>
+		<parameter name="chromeDriverPort" value="11000"></parameter>
+		<classes>
+			<class name="com.appium.tests.LoginTest"></class>
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="iOS ">
+		<listeners>
+			<listener class-name="com.appium.listeners.TestListeners"/>
+		</listeners>
+		<parameter name="platformName" value="iOS"></parameter>
+		<parameter name="platformVersion" value="13.5"></parameter>
+		<parameter name="deviceName" value="iPhone 11"></parameter>
+		<parameter name="emulator" value="true"></parameter>
+		<parameter name="udid" value="true"></parameter>
+		<parameter name="wdaLocalPort" value="10001"></parameter>
+		<parameter name="webkitDebugProxyPort" value="11001"></parameter>
+		<classes>
+			<class name="com.appium.tests.LoginTest"></class>
+	</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
